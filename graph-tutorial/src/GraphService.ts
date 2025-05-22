@@ -102,6 +102,11 @@ export interface CallRecord {
   id?: string;
   startDateTime?: string;
   endDateTime?: string;
+  joinWebUrl?: string;
+  lastModifiedDateTime?: string;
+  modalities?: string[];
+  type?: string;
+  version?: number;
 }
 
 export async function listCallRecords(authProvider: AuthCodeMSALBrowserAuthenticationProvider,

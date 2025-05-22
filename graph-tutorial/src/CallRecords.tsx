@@ -40,6 +40,8 @@ export default function CallRecords() {
               <tr>
                 <th>Start</th>
                 <th>End</th>
+                <th>Modalities</th>
+                <th>Type</th>
                 <th>Id</th>
               </tr>
             </thead>
@@ -48,6 +50,8 @@ export default function CallRecords() {
                 <tr key={record.id}>
                   <td>{record.startDateTime ? format(parseISO(record.startDateTime), app.user?.timeFormat || 'Pp') : ''}</td>
                   <td>{record.endDateTime ? format(parseISO(record.endDateTime), app.user?.timeFormat || 'Pp') : ''}</td>
+                  <td>{record.modalities?.join(', ')}</td>
+                  <td>{record.type}</td>
                   <td>{record.id}</td>
                 </tr>
               ))}
