@@ -12,6 +12,7 @@ languages:
 # Microsoft Graph sample React single-page app
 
 This sample demonstrates how to use the Microsoft Graph JavaScript SDK to access data in Office 365 from React browser apps.
+It also includes an example of retrieving Microsoft Teams call records using the call records API.
 
 ## Prerequisites
 

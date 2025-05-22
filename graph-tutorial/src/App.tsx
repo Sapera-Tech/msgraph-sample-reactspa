@@ -12,6 +12,7 @@ import NavBar from './NavBar';
 import Welcome from './Welcome';
 import Calendar from './Calendar';
 import NewEvent from './NewEvent';
+import CallRecords from './CallRecords';
 import 'bootstrap/dist/css/bootstrap.css';
 
 // <AppPropsSnippet>
@@ -36,6 +37,10 @@ export default function App({ pca }: AppProps): JSX.Element {
               <Route path="/calendar"
                 element={
                   <Calendar />
+                } />
+              <Route path="/callrecords"
+                element={
+                  <CallRecords />
                 } />
               <Route path="/newevent"
                 element={
