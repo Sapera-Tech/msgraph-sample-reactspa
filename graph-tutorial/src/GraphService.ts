@@ -96,3 +96,56 @@ export async function createEvent(authProvider: AuthCodeMSALBrowserAuthenticatio
     .post(newEvent);
 }
 // </CreateEventSnippet>
+
+// <CallRecordsSnippet>
+export interface CallRecord {
+  id?: string;
+  startDateTime?: string;
+  endDateTime?: string;
+}
+
+export async function listCallRecords(authProvider: AuthCodeMSALBrowserAuthenticationProvider,
+  top: number = 25): Promise<CallRecord[]> {
+  ensureClient(authProvider);
+
+  const response = await graphClient!
+    .api('/communications/callRecords')
+    .top(top)
+    .get();
+
+  return response.value as CallRecord[];
+}
+
+export async function getCallRecord(authProvider: AuthCodeMSALBrowserAuthenticationProvider,
+  id: string): Promise<CallRecord> {
+  ensureClient(authProvider);
+
+  return await graphClient!
+    .api(`/communications/callRecords/${id}`)
+    .get();
+}
+
+export async function getPstnCallLogs(authProvider: AuthCodeMSALBrowserAuthenticationProvider,
+  fromDateTime: string, toDateTime: string): Promise<any[]> {
+  ensureClient(authProvider);
+
+  const response = await graphClient!
+    .api('/communications/callRecords/getPstnCalls')
+    .query({ fromDateTime: fromDateTime, toDateTime: toDateTime })
+    .get();
+
+  return response.value;
+}
+
+export async function getDirectRoutingCallLogs(authProvider: AuthCodeMSALBrowserAuthenticationProvider,
+  fromDateTime: string, toDateTime: string): Promise<any[]> {
+  ensureClient(authProvider);
+
+  const response = await graphClient!
+    .api('/communications/callRecords/getDirectRoutingCalls')
+    .query({ fromDateTime: fromDateTime, toDateTime: toDateTime })
+    .get();
+
+  return response.value;
+}
+// </CallRecordsSnippet>
