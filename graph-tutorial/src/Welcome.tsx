@@ -3,9 +3,10 @@
 
 // <WelcomeSnippet>
 import {
-  Button,
+  Button as BsButton,
   Container
 } from 'react-bootstrap';
+import { Button } from './components/ui/button';
 import { AuthenticatedTemplate, UnauthenticatedTemplate } from '@azure/msal-react';
 import { useAppContext } from './AppContext';
 
@@ -26,7 +27,8 @@ export default function Welcome() {
           </div>
         </AuthenticatedTemplate>
         <UnauthenticatedTemplate>
-          <Button color="primary" onClick={app.signIn!}>Click here to sign in</Button>
+          <BsButton color="primary" onClick={app.signIn!} className="me-2">Click here to sign in</BsButton>
+          <Button onClick={app.signIn!}>Sign in with Shadcn</Button>
         </UnauthenticatedTemplate>
       </Container>
     </div>
