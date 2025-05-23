@@ -13,6 +13,7 @@ languages:
 
 This sample demonstrates how to use the Microsoft Graph JavaScript SDK to access data in Office 365 from React browser apps.
 It also includes an example of retrieving Microsoft Teams call records using the call records API.
+Additionally, a basic dialer page demonstrates how you might integrate the Microsoft Teams calling SDK to place phone calls.
 
 ## Prerequisites
 

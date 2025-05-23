@@ -48,6 +48,9 @@ export default function NavBar() {
               <NavItem>
                 <RouterNavLink to="/callrecords" className="nav-link">Call Records</RouterNavLink>
               </NavItem>
+              <NavItem>
+                <RouterNavLink to="/dialer" className="nav-link">Dialer</RouterNavLink>
+              </NavItem>
             </AuthenticatedTemplate>
           </Nav>
           <Nav className="ms-auto align-items-center" navbar>
