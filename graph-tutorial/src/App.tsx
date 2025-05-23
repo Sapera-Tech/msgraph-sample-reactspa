@@ -13,6 +13,7 @@ import Welcome from './Welcome';
 import Calendar from './Calendar';
 import NewEvent from './NewEvent';
 import CallRecords from './CallRecords';
+import TeamsDialer from './TeamsDialer';
 import 'bootstrap/dist/css/bootstrap.css';
 
 // <AppPropsSnippet>
@@ -41,6 +42,10 @@ export default function App({ pca }: AppProps): JSX.Element {
               <Route path="/callrecords"
                 element={
                   <CallRecords />
+                } />
+              <Route path="/dialer"
+                element={
+                  <TeamsDialer />
                 } />
               <Route path="/newevent"
                 element={
