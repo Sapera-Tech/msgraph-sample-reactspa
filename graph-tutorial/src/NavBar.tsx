@@ -32,7 +32,7 @@ export default function NavBar() {
   const user = app.user || { displayName: '', email: '' };
 
   return (
-    <Navbar bg="dark" variant="dark" expand="md" fixed="top">
+    <Navbar bg="primary" variant="dark" expand="md" fixed="top">
       <Container>
         <Navbar.Brand href="/">React Graph Tutorial</Navbar.Brand>
         <Navbar.Toggle />
