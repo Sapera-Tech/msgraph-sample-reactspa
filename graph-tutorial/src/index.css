@@ -4,6 +4,8 @@
 
 body {
   padding-top: 4.5rem;
+  background-color: #f8f9fa;
+  color: #343a40;
 }
 
 .alert-pre {
